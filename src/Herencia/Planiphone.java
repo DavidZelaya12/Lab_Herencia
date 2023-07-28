@@ -15,9 +15,9 @@ public class Planiphone extends Plan{
         return total;
     }
     
-    public void print(){
-        super.Print();
-        System.out.println("Email: "+email);
+    public String print(){
+        String correo=super.Print()+"Tipo: iphone Email: "+email;
+        return correo;
     }
     
     public String getEmail(){

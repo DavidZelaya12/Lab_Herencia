@@ -20,8 +20,9 @@ public abstract class Plan {
         return nombre;
     }
     
-    public void Print(){
-        System.out.println("Nombre: "+nombre+"<br/>Número: "+numero);
+    public String Print(){
+        String info="Nombre: "+nombre+"Número: "+numero;
+        return info;
     }
     
 }

@@ -20,9 +20,9 @@ public class PlanSamsung extends Plan{
         return precio;
     }
     
-    public void Print(){
-        super.Print();
-        System.out.println("<br/>Pin: "+pin);
+    public String Print(){
+        String Pin=super.Print()+"Tipo: Samsung Pin: "+pin;
+        return Pin;
     }
     
     public void agregarPinAmigo(String pin){
