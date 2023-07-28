@@ -3,8 +3,14 @@ package Herencia;
 public class MAIN extends javax.swing.JFrame {
 
     Tigo tigo;
+    
     public MAIN() {
         initComponents();
+        this.tigo=new Tigo();
+    }
+    
+    public void getTigo(Tigo tigo){
+        this.tigo=tigo;
     }
 
     /**

@@ -1,16 +1,23 @@
 package Herencia;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
         
 public class Tigo {
     
-    ArrayList<PlanSamsung> listasamsung = new ArrayList();
-    ArrayList<Planiphone> listaiphone = new ArrayList();
+    static private ArrayList<PlanSamsung> listasamsung = new ArrayList();
+    static private ArrayList<Planiphone> listaiphone = new ArrayList();
     
     public void agregarPlan(int numerotel, String nombre, String extra, String tipo){
+        if(busqueda(numerotel,extra,tipo,0)==false){
         if (tipo.equals("Samsung")){
             listasamsung.add(new PlanSamsung(numerotel,nombre,extra));
+            JOptionPane.showMessageDialog(null, "Se ha agregado el plan","Listo", JOptionPane.INFORMATION_MESSAGE);
         } else if (tipo.equals("iPhone")){
             listaiphone.add(new Planiphone(numerotel,nombre, extra));
+        JOptionPane.showMessageDialog(null, "Se ha agregado el plan","Listo", JOptionPane.INFORMATION_MESSAGE);
+        }
+        }else{
+            JOptionPane.showMessageDialog(null, "Este numero ya esta registrado","Error", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     
