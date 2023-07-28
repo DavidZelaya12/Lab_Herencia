@@ -35,4 +35,8 @@ public class PlanSamsung extends Plan{
         if(error==0)
             bbm.add(pin);
     }
+    
+    public String getPin(){
+        return pin;
+    }
 }
