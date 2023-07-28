@@ -4,6 +4,8 @@
  */
 package Herencia;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author hp
@@ -16,7 +18,7 @@ public class PagoPlan extends javax.swing.JFrame {
     public PagoPlan() {
         initComponents();
     }
-
+    Tigo tigo = new Tigo();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,6 +76,11 @@ public class PagoPlan extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("sansserif", 1, 16)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("PAGAR PLAN");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("sansserif", 1, 16)); // NOI18N
@@ -165,6 +172,14 @@ public class PagoPlan extends javax.swing.JFrame {
         new MAIN().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        tigo.pagoPlan(Integer.parseInt(jTextField1.getText()), Integer.parseInt(jTextField2.getText()),Integer.parseInt(jTextField4.getText()));
+        if(tigo.pagoPlan(Integer.parseInt(jTextField1.getText()), Integer.parseInt(jTextField2.getText()),Integer.parseInt(jTextField4.getText()))==0)
+            JOptionPane.showMessageDialog(rootPane,"Numero Inexistente");
+        else
+            JOptionPane.showMessageDialog(rootPane,"Numero Pagado Exitosamente");
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
